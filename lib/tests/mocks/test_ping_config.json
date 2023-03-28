@@ -1,0 +1,15 @@
+{
+    "name": "Test ping",
+    "data": {
+        "type": "file",
+        "level": 0,
+        "path": "./lib/tests/mocks/test_ping_output.txt"
+    },
+    "sources": [
+        {
+            "name": "Localhost",
+            "source": "127.0.0.1",
+            "type": "ping"
+        }
+    ]
+}

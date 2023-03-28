@@ -1,0 +1,22 @@
+{
+    "name": "Test",
+    "data": {
+        "type": "stdout",
+        "level": 0,
+        "path": "./data/test.txt"
+    },
+    "sources": [
+        {
+            "name": "Source1",
+            "source": "192.168.0.1/status",
+            "type": "curl",
+            "method": "GET",
+            "regex": "Status"
+        },
+        {
+            "name": "Source2",
+            "source": "192.168.0.10",
+            "type": "ping"
+        }
+    ]
+}

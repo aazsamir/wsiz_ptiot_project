@@ -1,9 +1,9 @@
 {
     "name": "Local network",
     "data": {
-        "type": "file",
-        "level": 1,
-        "path": "./data/output.txt"
+        "type": "sqlite",
+        "level": 0,
+        "path": "./data/output.db"
     },
     "sources": [
         {

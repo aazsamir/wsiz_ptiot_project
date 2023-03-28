@@ -44,6 +44,9 @@ class Config:
 
     def __str__(self) -> str:
         result = f"Config: {self._name}\n"
+
+        result += f" Data: {self._data.type()} {self._data.level()} {self._data.path()}\n"
+
         for source in self._sources:
             result += f" {source}\n"
 

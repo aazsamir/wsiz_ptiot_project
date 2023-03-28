@@ -12,6 +12,8 @@ class RepositoryFactory:
             repository = FileRepository(config.data().path())
         elif config.data().type() == DataType.SQLITE:
             repository = SqliteRepository(config.data().path())
+        elif config.data().type() == DataType.STDOUT:
+            raise Exception("Stdout repository is not implemented!")
 
         if repository is None:
             raise Exception("Repository is not defined")

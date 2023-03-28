@@ -2,6 +2,12 @@
 
 This is a simple script to collect data from local devices in a network.
 
+## Requirements
+
+```
+pip install -r requirements.txt
+```
+
 ## Usage
 
 ### Collecting data

@@ -29,7 +29,8 @@ def parseHelp(args: list) -> None:
 
 
 def parseFilepath(args: list) -> str:
-    filepath = None
+    filepath = "config.json"
+
     for arg in args:
         if arg.startswith('--config='):
             filepath = arg.split('=')[1]
@@ -61,7 +62,7 @@ def parseVerbose(args: list) -> bool:
 def printHelp() -> None:
     print("Usage: ./run.py [config_file]")
     print("Options:")
-    print("  -c, --config=FILE     Specify config file")
+    print("  -c, --config=FILE     Specify config file. Default: config.json")
     print("  -h, --help            Show this help message and exit")
     print("  -v, --verbose         Show verbose output")
     sys.exit(1)

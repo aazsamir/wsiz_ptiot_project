@@ -1,9 +1,9 @@
 {
     "name": "Local network",
     "data": {
-        "type": "stdout",
+        "type": "sqlite",
         "level": 0,
-        "path": "./data/output.txt"
+        "path": "./data/output.db"
     },
     "sources": [
         {
@@ -15,7 +15,7 @@
         },
         {
             "name": "Printer",
-            "source": "192.168.0.10",
+            "source": "192.168.0.30",
             "type": "ping"
         }
     ]

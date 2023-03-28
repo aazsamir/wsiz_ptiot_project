@@ -1,7 +1,7 @@
 {
     "name": "Local network",
     "data": {
-        "type": "file",
+        "type": "stdout",
         "level": 0,
         "path": "./data/output.txt"
     },

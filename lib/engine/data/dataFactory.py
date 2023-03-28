@@ -1,4 +1,4 @@
-from lib.engine.config import DataConfig
+from lib.engine.config import DataConfig, DataType
 from lib.engine.data.fileData import FileData
 from lib.engine.data.sqliteData import SqliteData
 from lib.engine.data.stdoutData import StdoutData
@@ -10,13 +10,13 @@ class DataFactory:
         self,
         data: DataConfig
     ) -> Data:
-        if data.type() == 'file':
+        if data.type() == DataType.FILE:
             return FileData(data.path())
-        
-        if data.type() == 'sqlite':
+
+        if data.type() == DataType.SQLITE:
             return SqliteData(data.path())
-        
-        if data.type() == 'stdout':
+
+        if data.type() == DataType.STDOUT:
             return StdoutData()
 
-        raise Exception('Unknown data type: ' + data.type())
+        raise Exception('Not implemented data type: ' + data.type().value)

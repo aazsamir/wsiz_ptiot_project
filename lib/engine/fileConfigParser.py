@@ -2,7 +2,7 @@ import json
 
 from lib.engine.config import Config
 from lib.engine.source import Source, Method, Type
-from lib.engine.config import DataConfig
+from lib.engine.config import DataConfig, DataType
 
 
 class FileConfigParser:
@@ -17,7 +17,7 @@ class FileConfigParser:
             config_dict = json.load(file)
 
         data = DataConfig(
-            type=config_dict['data']['type'],
+            type=DataType[config_dict['data']['type'].upper()],
             level=config_dict['data']['level'],
             path=config_dict['data']['path'])
 

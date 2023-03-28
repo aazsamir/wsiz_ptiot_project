@@ -1,10 +1,16 @@
+from enum import Enum
+
 from lib.engine.source import Source
 
+class DataType(Enum):
+    FILE = "file"
+    SQLITE = "sqlite"
+    STDOUT = "stdout"
 
 class DataConfig:
     def __init__(
         self,
-        type: str,
+        type: DataType,
         level: int,
         path: str
     ):
@@ -12,7 +18,7 @@ class DataConfig:
         self._level = level
         self._path = path
 
-    def type(self) -> str:
+    def type(self) -> DataType:
         return self._type
 
     def level(self) -> int:

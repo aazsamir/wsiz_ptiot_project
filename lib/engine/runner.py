@@ -16,7 +16,7 @@ class Runner:
 
     def run(self):
         if self.verbose():
-            print("Running with config: {}".format(self._config))
+            print("Running with config:\n{}".format(self._config))
 
         for source in self._config.sources():
             if self.verbose():

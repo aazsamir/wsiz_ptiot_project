@@ -3,11 +3,11 @@ from io import BytesIO
 from urllib.parse import urlencode
 import re
 
-from lib.engine.resolver import resolver
+from lib.engine.resolver.resolver import Resolver
 from lib.engine.source import Source, Method
 
 
-class CurlResolver(resolver.Resolver):
+class CurlResolver(Resolver):
     def resolve(
             self,
             source: Source

@@ -1,16 +1,18 @@
-from lib.engine import source as engineSource
-from lib.engine.resolver import resolver, pingResolver, curlResolver
+from lib.engine.source import Source, Type
+from lib.engine.resolver.resolver import Resolver
+from lib.engine.resolver.pingResolver import PingResolver
+from lib.engine.resolver.curlResolver import CurlResolver
 
 
 class ResolverFactory:
     def make(
             self,
-            source: engineSource.Source,
-    ) -> resolver.Resolver:
-        if source.type() == engineSource.Type.CURL:
-            return curlResolver.CurlResolver()
+            source: Source,
+    ) -> Resolver:
+        if source.type() == Type.CURL:
+            return CurlResolver()
 
-        if source.type() == engineSource.Type.PING:
-            return pingResolver.PingResolver()
+        if source.type() == Type.PING:
+            return PingResolver()
 
-        return resolver.Resolver()
+        return Resolver()

@@ -1,9 +1,9 @@
-from lib.engine import source
+from lib.engine.source import Source
 
 
 class Resolver:
     def resolve(
             self,
-            source: source.Source
+            source: Source
     ) -> bool:
         raise NotImplementedError

@@ -1,12 +1,12 @@
-from lib.engine.resolver import resolver
-from lib.engine import source
+from lib.engine.resolver.resolver import Resolver
+from lib.engine.source import Source
 import os
 
 
-class PingResolver(resolver.Resolver):
+class PingResolver(Resolver):
     def resolve(
             self,
-            source: source.Source
+            source: Source
     ) -> bool:
         result = False
 

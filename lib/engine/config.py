@@ -1,4 +1,4 @@
-from lib.engine import source
+from lib.engine.source import Source
 
 
 class DataConfig:
@@ -27,7 +27,7 @@ class Config:
         self,
         name: str,
         data: DataConfig,
-        sources: list[source.Source]
+        sources: list[Source]
     ):
         self._name = name
         self._data = data
@@ -39,7 +39,7 @@ class Config:
     def data(self) -> DataConfig:
         return self._data
 
-    def sources(self) -> list[source.Source]:
+    def sources(self) -> list[Source]:
         return self._sources
 
     def __str__(self) -> str:

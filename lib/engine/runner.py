@@ -1,17 +1,17 @@
-from lib.engine import config
-from lib.engine.resolver import resolverFactory
+from lib.engine.config import Config
+from lib.engine.resolver.resolverFactory import ResolverFactory
 from lib.engine.data.dataFactory import DataFactory
 
 
 class Runner:
     def __init__(
             self,
-            config: config.Config,
+            config: Config,
             verbose: bool = False
     ):
         self._config = config
         self._verbose = verbose
-        self._resolverFactory = resolverFactory.ResolverFactory()
+        self._resolverFactory = ResolverFactory()
         self._data = DataFactory().make(config.data())
 
     def run(self):

@@ -1,0 +1,16 @@
+{
+    "name": "Local network",
+    "sources": [
+        {
+            "name": "Tasmota",
+            "source": "192.168.0.6",
+            "type": "curl",
+            "method": "POST"
+        },
+        {
+            "name": "Printer",
+            "source": "192.168.0.10",
+            "type": "ping"
+        }
+    ]
+}

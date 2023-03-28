@@ -1,11 +1,17 @@
 {
     "name": "Local network",
+    "data": {
+        "type": "file",
+        "level": 1,
+        "path": "./data/output.txt"
+    },
     "sources": [
         {
             "name": "Tasmota",
-            "source": "192.168.0.6",
+            "source": "192.168.0.6/cm?cmnd=Status",
             "type": "curl",
-            "method": "POST"
+            "method": "POST",
+            "regex": "Status"
         },
         {
             "name": "Printer",

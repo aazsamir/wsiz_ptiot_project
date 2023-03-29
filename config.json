@@ -1,9 +1,10 @@
 {
     "name": "Local network",
+    "timeout": 1800,
     "data": {
-        "type": "sqlite",
+        "type": "file",
         "level": 0,
-        "path": "./data/output.db"
+        "path": "./data/output.txt"
     },
     "sources": [
         {

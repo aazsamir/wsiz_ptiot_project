@@ -4,3 +4,4 @@ __pycache__
 */*/*/__pycache__
 /data/*
 !/data/.gitkeep
+local_devices_data_collector.service

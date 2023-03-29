@@ -8,9 +8,6 @@ from lib.engine.service import Service
 def parseArgs(args: list):
     args = args[1:]
 
-    if len(args) < 1:
-        printHelp()
-
     parseHelp(args)
 
     filepath = parseFilepath(args)
@@ -68,7 +65,11 @@ def printHelp() -> None:
     sys.exit(1)
 
 
-if __name__ == '__main__':
-    args = parseArgs(sys.argv)
+def run(sys_args: list):
+    args = parseArgs(sys_args)
     service = Service(args["filepath"], args["verbose"])
     service.run()
+
+
+if __name__ == '__main__':
+    run(sys.argv)

@@ -16,7 +16,7 @@
         },
         {
             "name": "Printer",
-            "source": "192.168.0.30",
+            "source": "192.168.0.3",
             "type": "ping"
         }
     ]

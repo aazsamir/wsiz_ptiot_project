@@ -23,6 +23,7 @@ def parseHelp(args: list) -> None:
     for arg in args:
         if arg == '--help' or arg == '-h':
             printHelp()
+            break
 
 
 def parseFilepath(args: list) -> str:

@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, Response
 import json
 
 from lib.engine.fileConfigParser import FileConfigParser
@@ -41,4 +41,6 @@ def jsonize(results: list[Result]) -> str:
             "date": result.date().strftime("%Y-%m-%d %H:%M:%S")
         })
 
-    return json.dumps(json_data)
+    response = Response(json.dumps(json_data), mimetype='application/json')
+
+    return response
